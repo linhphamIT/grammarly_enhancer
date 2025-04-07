@@ -3,7 +3,7 @@ services:
     name: grammarly-enhancer
     runtime: python3
     buildCommand: pip install -r requirements.txt
-    startCommand: uvicorn grammarly_enhancer.main:app --host 0.0.0.0 --port $PORT
+startCommand: uvicorn src.grammarly_enhancer.main:app --host 0.0.0.0 --port $PORT
     healthCheckPath: /
     envVars:
       - key: PORT

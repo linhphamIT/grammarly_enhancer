@@ -9,7 +9,7 @@ try:
     from grammarly_enhancer.tools.grammar_tool import call_gemini_api
 except ImportError:
     # Handle case where the structure might be slightly different when run directly
-    from tools.grammar_tool import call_gemini_api
+    from .tools.grammar_tool import call_gemini_api
 
 
 # --- Pydantic Model for Request Body ---
