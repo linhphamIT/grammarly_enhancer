@@ -5,15 +5,11 @@ description = "grammarly-enhancer using crewAI"
 authors = [{ name = "Your Name", email = "you@example.com" }]
 requires-python = ">=3.10,<3.13"
 dependencies = [
-    "crewai[tools]>=0.108.0,<1.0.0"
+    "crewai[tools]>=0.108.0,<1.0.0",
+    "fastapi>=0.110.0,<1.0.0",
+    "uvicorn[standard]>=0.29.0,<1.0.0",
+    "pydantic>=2.0.0,<3.0.0" # Often needed with FastAPI for request/response models
 ]
-
-[project.scripts]
-grammarly_enhancer = "grammarly_enhancer.main:run"
-run_crew = "grammarly_enhancer.main:run"
-train = "grammarly_enhancer.main:train"
-replay = "grammarly_enhancer.main:replay"
-test = "grammarly_enhancer.main:test"
 
 [build-system]
 requires = ["hatchling"]
